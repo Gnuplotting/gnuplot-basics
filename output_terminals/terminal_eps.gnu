@@ -16,8 +16,8 @@ set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2  # red
 # Legend
 set key at 6.1,1.3
 # Axes label 
-set xlabel '{/Helvetica-Italic x}'
-set ylabel '{/Helvetica-Italic y}'
+set xlabel '{/Helvetica-Oblique x}'
+set ylabel '{/Helvetica-Oblique y}'
 # Axis ranges
 set xrange[-2*pi:2*pi]
 set yrange[-1.5:1.5]
@@ -31,6 +31,6 @@ a = 0.9
 f(x) = a * sin(x)
 g(x) = a * cos(x)
 # Plot
-plot f(x) title 'sin({/Helvetica-Italic x})' with lines ls 1, \
+plot f(x) title 'sin({/Helvetica-Oblique x})' with lines ls 1, \
      g(x) notitle with lines ls 2
 
