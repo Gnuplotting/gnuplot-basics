@@ -26,7 +26,7 @@ set xlabel 'Resistance (Ω)'
 set ylabel 'Power (mW)'
 set tics scale 0.75
 
-# Therotecial curve
+# Theoretical curve
 P(x) = 1.53**2 * x/(5.67+x)**2 * 1000
 
 plot [-2:52][0:120] 'battery.dat' u 1:($2*1000):($4*1000) \
