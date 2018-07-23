@@ -6,15 +6,9 @@
 
 reset
 
-# x11
-set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 # png
-#set terminal pngcairo size 350,262 enhanced font 'Verdana,10'
-#set output 'battery.png'
-# svg
-#set terminal svg size 350,262 fname 'Verdana, Helvetica, Arial, sans-serif' \
-#fsize '10'
-#set output 'battery.svg'
+set terminal pngcairo size 350,262 enhanced font 'Verdana,10'
+set output 'battery.png'
 
 set border linewidth 1.5
 # Set first two line styles to blue (#0060ad) and red (#dd181f)

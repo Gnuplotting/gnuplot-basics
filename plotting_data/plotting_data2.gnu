@@ -6,15 +6,9 @@
 
 reset
 
-# x11
-set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 # png
-#set terminal pngcairo size 350,262 enhanced font 'Verdana,10'
-#set output 'plotting_data2.png'
-# svg
-#set terminal svg size 350,262 fname 'Verdana, Helvetica, Arial, sans-serif' \
-#fsize '10'
-#set output 'plotting_data2.svg'
+set terminal pngcairo size 350,262 enhanced font 'Verdana,10'
+set output 'plotting_data2.png'
 
 set border linewidth 1.5
 # Set first linestyle to blue (#0060ad)
