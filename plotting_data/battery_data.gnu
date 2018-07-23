@@ -17,8 +17,11 @@ set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 2 pointtype 7
 unset key
 set xlabel 'Resistance (Ω)'
 set ylabel 'Power (mW)'
-set format y '%.0s'
 set tics scale 0.75
 
-plot [-2:52][0:0.12] 'battery.dat' using 1:2:4 with yerrorbars linestyle 1, \
-                     '' with lines linestyle 1
+set xrange [-2:52]
+set yrange [0:0.12]
+set format y '%.0s'
+
+plot 'battery.dat' using 1:2:4 with yerrorbars linestyle 1, \
+     ''                        with lines linestyle 1

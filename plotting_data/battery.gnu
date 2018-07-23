@@ -23,6 +23,8 @@ set tics scale 0.75
 # Theoretical curve
 P(x) = 1.53**2 * x/(5.67+x)**2 * 1000
 
-plot [-2:52][0:120] 'battery.dat' u 1:($2*1000):($4*1000) \
-                        title 'Power' with yerrorbars ls 2, \
-                    P(x) title 'Theory' with lines ls 1
+set xrange [-2:52]
+set yrange [0:120]
+
+plot 'battery.dat' u 1:($2*1000):($4*1000) title 'Power' with yerrorbars ls 2, \
+     P(x) title 'Theory' with lines ls 1
