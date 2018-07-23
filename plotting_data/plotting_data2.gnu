@@ -1,6 +1,6 @@
 #!/usr/bin/gnuplot
 #
-# Plotting the data of file plotting_data1.dat
+# Plotting the data of file plotting_data2.dat
 #
 # AUTHOR: Hagen Wierstorf
 
