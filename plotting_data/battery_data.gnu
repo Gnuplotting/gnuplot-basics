@@ -16,9 +16,9 @@ set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 #fsize '10'
 #set output 'battery_data.svg'
 
-# color definitions
 set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 # --- blue
+# Set color of linestyle 1 to blue (#0060ad)
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 2 pointtype 7
 
 unset key
 set xlabel 'Resistance (Ω)'
@@ -26,5 +26,5 @@ set ylabel 'Power (mW)'
 set format y '%.0s'
 set tics scale 0.75
 
-plot [-2:52][0:0.12] 'battery.dat' using 1:2:4 w yerrorbars ls 1, \
-                     '' w lines ls 1
+plot [-2:52][0:0.12] 'battery.dat' using 1:2:4 with yerrorbars linestyle 1, \
+                     '' with lines linestyle 1

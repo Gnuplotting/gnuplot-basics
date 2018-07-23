@@ -16,9 +16,10 @@ set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 #fsize '10'
 #set output 'plotting_data1.svg'
 
-# color definitions
 set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 1.5 # --- blue
+# Set first linestyle to blue (#0060ad)
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 2 \
+                                         pointtype 7 pointsize 1.5
 
 unset key
 
@@ -28,4 +29,4 @@ set tics scale 0.75
 set xrange [0:5]
 set yrange [0:4]
 
-plot 'plotting_data1.dat' with linespoints ls 1
+plot 'plotting_data1.dat' with linespoints linestyle 1

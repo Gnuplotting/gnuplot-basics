@@ -16,10 +16,10 @@ set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 #fsize '10'
 #set output 'battery.svg'
 
-# color definitions
 set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 1 lw 2 # --- blue
-set style line 2 lc rgb '#dd181f' lt 1 lw 2 pt 7 # --- red
+# Set first two line styles to blue (#0060ad) and red (#dd181f)
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 2
+set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2 pointtype 7
 
 set key at 50,112
 set xlabel 'Resistance (Ω)'
@@ -30,5 +30,5 @@ set tics scale 0.75
 P(x) = 1.53**2 * x/(5.67+x)**2 * 1000
 
 plot [-2:52][0:120] 'battery.dat' u 1:($2*1000):($4*1000) \
-                        t 'Power' w yerrorbars ls 2, \
-                    P(x) t 'Theory' w lines ls 1
+                        title 'Power' with yerrorbars ls 2, \
+                    P(x) title 'Theory' with lines ls 1

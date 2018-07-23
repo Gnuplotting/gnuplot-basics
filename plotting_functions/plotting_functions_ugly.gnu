@@ -16,10 +16,10 @@ set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 #fsize '10'
 #set output 'plotting_functions_ugly.svg'
 
-# Line styles
 set border linewidth 1.5
-set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 2  # blue
-set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2  # red
+# Set first two line styles to blue (#0060ad) and red (#dd181f)
+set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 2
+set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2
 
 # Functions to plot
 a = 0.9
@@ -27,6 +27,6 @@ f(x) = a * sin(x)
 g(x) = a * cos(x)
 
 # Plot
-plot f(x) title 'sin(x)' with lines ls 1, \
-     g(x) notitle with lines ls 2
+plot f(x) title 'sin(x)' with lines linestyle 1, \
+     g(x) notitle with lines linestyle 2
 
