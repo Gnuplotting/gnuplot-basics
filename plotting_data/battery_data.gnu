@@ -6,8 +6,8 @@
 
 reset
 
-# wxt
-set terminal wxt size 350,262 enhanced font 'Verdana,10' persist
+# x11
+set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 # png
 #set terminal pngcairo size 350,262 enhanced font 'Verdana,10'
 #set output 'battery_data.png'
