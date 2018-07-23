@@ -18,10 +18,14 @@ set terminal x11 size 350,262 enhanced font 'Verdana,10' persist
 
 set border linewidth 1.5
 # Set first two line styles to blue (#0060ad) and red (#dd181f)
-set style line 1 linecolor rgb '#0060ad' linetype 1 linewidth 2 \
-                                         pointtype 7 pointsize 1.5
-set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2 \
-                                         pointtype 5 pointsize 1.5
+set style line 1 \
+    linecolor rgb '#0060ad' \
+    linetype 1 linewidth 2 \
+    pointtype 7 pointsize 1.5
+set style line 2 \
+    linecolor rgb '#dd181f' \
+    linetype 1 linewidth 2 \
+    pointtype 5 pointsize 1.5
 
 unset key
 
